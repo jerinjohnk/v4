@@ -3885,9 +3885,9 @@ content-type@^1.0.4, content-type@~1.0.4:
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
 contentful-management@^7.5.1:
-  version "7.7.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.7.0.tgz#0d5335b0f21a7d2ca88eeb6efa203be55b411e5a"
-  integrity sha512-DqDrh7c0/1nZLobv0B1Tnb8+2Ug8C/4V3ZZyoucdJ/SzKXHxDEE94uGt/kgT/LIqa49wOrdaTVAgrAJv+5Wl9Q==
+  version "7.8.0"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.8.0.tgz#7e80417d99e954d32ab88452b5fc30acae2f713d"
+  integrity sha512-7m9YmKlAmlo1IbzgAwi/sVtipLFKB8f32kmwGyB2/+E5EbPFcSlsptTcUrVg7y34EinggQiBUYVJO/6qZ6wlYw==
   dependencies:
     axios "^0.21.0"
     contentful-sdk-core "^6.7.0"
@@ -4957,9 +4957,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.649:
-  version "1.3.659"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.659.tgz#479eb1a80044ad3664ebd548e7b225fefe06a914"
-  integrity sha512-VPc1LcvuQYGjam6k7JcB6uJFTMo2YNlJ6rSbwbxApZQdow7X81kh/vDB6LB5B8DNmvkbKnpZkLmpKmnvoKA+Gw==
+  version "1.3.660"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.660.tgz#bfa8ce23735391cbd1c75c38f483e3179d0e0370"
+  integrity sha512-UOSKNfUBY8FDOSo4mfaUsN3KftlNLcYOg9v5apqLvNcWj+Ogy/i9SEDMZpfSVOeDkOcpu9iusucX6jxTWzqGLA==
 
 elliptic@^6.5.3:
   version "6.5.4"
@@ -7191,9 +7191,9 @@ got@^9.6.0:
     url-parse-lax "^3.0.0"
 
 graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.2, graceful-fs@^4.2.3, graceful-fs@^4.2.4:
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.5.tgz#bc18864a6c9fc7b303f2e2abdb9155ad178fbe29"
-  integrity sha512-kBBSQbz2K0Nyn+31j/w36fUfxkBW9/gfwRWdUY1ULReH3iokVJgddZAFcD1D0xlgTmFxJCbUkUclAlc6/IDJkw==
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.6.tgz#ff040b2b0853b23c3d31027523706f1885d76bee"
+  integrity sha512-nTnJ528pbqxYanhpDYsi4Rd8MAeaBA67+RZ10CM1m3bTAVFEDcd5AuA4a6W5YkGZ1iNXHzZz8T6TBKLeBuNriQ==
 
 graphql-compose@^6.3.8:
   version "6.3.8"
