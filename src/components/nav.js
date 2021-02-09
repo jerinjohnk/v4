@@ -64,14 +64,14 @@ const StyledNav = styled.nav`
     ${({ theme }) => theme.mixins.flexCenter};
 
     a {
-      color: var(--green);
+      color: var(--yellow);
       width: 42px;
       height: 42px;
 
       &:hover,
       &:focus {
         svg {
-          fill: var(--green-tint);
+          fill: var(--yellow-tint);
         }
       }
 
@@ -110,7 +110,7 @@ const StyledLinks = styled.div`
         &:before {
           content: '0' counter(item) '.';
           margin-right: 5px;
-          color: var(--green);
+          color: var(--yellow);
           font-size: var(--fz-xxs);
           text-align: right;
         }
@@ -193,7 +193,7 @@ const Nav = ({ isHome }) => {
                 <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
                   <a
                     className="resume-button"
-                    href="/resume.pdf"
+                    href="/Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer">
                     Resume

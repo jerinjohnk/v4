@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://raw.githubusercontent.com/bchiang7/v4/main/src/images/logo.png" width="100" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/jerinjohnk/v4/main/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
   brittanychiang.com - v4
@@ -19,7 +19,7 @@
   </a>
 </p>
 
-![demo](https://raw.githubusercontent.com/bchiang7/v4/main/src/images/demo.png)
+![demo](https://raw.githubusercontent.com/jerinjohnk/v4/main/src/images/demo.png)
 
 ## 🚨 Forking this repo (please read!)
 
@@ -84,4 +84,4 @@ Yes, you can fork this repo. Please give me proper credit by linking back to [br
 | Light Slate    | ![#a8b2d1](https://via.placeholder.com/10/a8b2d1?text=+) `#a8b2d1` |
 | Lightest Slate | ![#ccd6f6](https://via.placeholder.com/10/ccd6f6?text=+) `#ccd6f6` |
 | White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
-| Green          | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` |
+| Yellow         | ![#FFDF6C](https://via.placeholder.com/10/FFDF6C?text=+) `#FFDF6C` |

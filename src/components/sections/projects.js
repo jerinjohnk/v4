@@ -71,7 +71,7 @@ const StyledProject = styled.div`
     margin-bottom: 35px;
 
     .folder {
-      color: var(--green);
+      color: var(--yellow);
       svg {
         width: 40px;
         height: 40px;
@@ -148,15 +148,19 @@ const Projects = () => {
           fileAbsolutePath: { regex: "/projects/" }
           frontmatter: { showInProjects: { ne: false } }
         }
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { fields: [frontmatter___id], order: ASC }
       ) {
         edges {
           node {
             frontmatter {
+              date
               title
               tech
-              github
+              android
+              ios
+              win
               external
+              hero
             }
             html
           }
@@ -176,10 +180,10 @@ const Projects = () => {
     revealProjects.current.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }, []);
 
-  const GRID_LIMIT = 6;
+  const GRID_LIMIT = 3;
   const projects = data.projects.edges.filter(({ node }) => node);
-  const firstSix = projects.slice(0, GRID_LIMIT);
-  const projectsToShow = showMore ? projects : firstSix;
+  const limitedProjects = projects.slice(0, GRID_LIMIT);
+  const projectsToShow = showMore ? projects : limitedProjects;
 
   return (
     <StyledProjectsSection>
@@ -193,7 +197,7 @@ const Projects = () => {
         {projectsToShow &&
           projectsToShow.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { github, external, title, tech } = frontmatter;
+            const { title, tech, android, ios, win, external, hero } = frontmatter;
 
             return (
               <CSSTransition
@@ -212,16 +216,42 @@ const Projects = () => {
                     <header>
                       <div className="project-top">
                         <div className="folder">
-                          <Icon name="Folder" />
+                          <Icon name={hero} />
                         </div>
                         <div className="project-links">
-                          {github && (
-                            <a href={github} aria-label="GitHub Link">
-                              <Icon name="GitHub" />
+                          {android && (
+                            <a
+                              href={android}
+                              aria-label="Android Link"
+                              target="_blank"
+                              rel="nofollow noopener noreferrer">
+                              <Icon name="PlayStore" />
+                            </a>
+                          )}
+                          {ios && (
+                            <a
+                              href={ios}
+                              aria-label="iOS Link"
+                              target="_blank"
+                              rel="nofollow noopener noreferrer">
+                              <Icon name="AppStore" />
+                            </a>
+                          )}
+                          {win && (
+                            <a
+                              href={win}
+                              aria-label="Windows Link"
+                              target="_blank"
+                              rel="nofollow noopener noreferrer">
+                              <Icon name="Windows" />
                             </a>
                           )}
                           {external && (
-                            <a href={external} aria-label="External Link" className="external">
+                            <a
+                              href={external}
+                              aria-label="External Link"
+                              target="_blank"
+                              rel="nofollow noopener noreferrer">
                               <Icon name="External" />
                             </a>
                           )}

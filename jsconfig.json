@@ -1,0 +1,20 @@
+// This file is a helper file to allow intellisense to work in VS Code
+// [link](https://bit.ly/relative-path)
+
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonJS",
+    "baseUrl": "./src/",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@config/*": ["config/*"],
+      "@fonts/*": ["fonts/*"],
+      "@hooks/*": ["hooks/*"],
+      "@images/*": ["images/*"],
+      "@pages/*": ["pages/*"],
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
+    }
+  }
+}

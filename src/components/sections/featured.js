@@ -87,7 +87,7 @@ const StyledProject = styled.div`
 
   .project-overline {
     margin: 10px 0;
-    color: var(--green);
+    color: var(--yellow);
     font-family: var(--font-mono);
     font-size: var(--fz-xs);
     font-weight: 400;
@@ -103,6 +103,11 @@ const StyledProject = styled.div`
 
     @media (max-width: 768px) {
       color: var(--white);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--yellow);
     }
   }
 
@@ -179,8 +184,8 @@ const StyledProject = styled.div`
       }
 
       svg {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
       }
     }
   }
@@ -200,7 +205,7 @@ const StyledProject = styled.div`
 
     a {
       width: 100%;
-      background-color: var(--green);
+      background-color: var(--yellow);
       border-radius: var(--border-radius);
       vertical-align: middle;
 
@@ -259,14 +264,14 @@ const Featured = () => {
               title
               cover {
                 childImageSharp {
-                  fluid(maxWidth: 700, traceSVG: { color: "#64ffda" }) {
+                  fluid(maxWidth: 700, traceSVG: { color: "#FFDF6C" }) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                   }
                 }
               }
               tech
-              github
-              external
+              ios
+              android
             }
             html
           }
@@ -294,13 +299,20 @@ const Featured = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node;
-            const { external, title, tech, github, cover } = frontmatter;
+            const { title, tech, cover, ios, android } = frontmatter;
+            const navToLink = android ? android : ios ? ios : '#';
 
             return (
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
                   <p className="project-overline">Featured Project</p>
-                  <h3 className="project-title">{title}</h3>
+                  <a
+                    href={navToLink}
+                    aria-label="External Link"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer">
+                    <h3 className="project-title">{title}</h3>
+                  </a>
                   <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
 
                   {tech.length && (
@@ -312,21 +324,29 @@ const Featured = () => {
                   )}
 
                   <div className="project-links">
-                    {github && (
-                      <a href={github} aria-label="GitHub Link">
-                        <Icon name="GitHub" />
+                    {android && (
+                      <a
+                        href={android}
+                        aria-label="Android Link"
+                        target="_blank"
+                        rel="nofollow noopener noreferrer">
+                        <Icon name="PlayStore" />
                       </a>
                     )}
-                    {external && (
-                      <a href={external} aria-label="External Link" className="external">
-                        <Icon name="External" />
+                    {ios && (
+                      <a
+                        href={ios}
+                        aria-label="iOS Link"
+                        target="_blank"
+                        rel="nofollow noopener noreferrer">
+                        <Icon name="AppStore" />
                       </a>
                     )}
                   </div>
                 </div>
 
                 <div className="project-image">
-                  <a href={external ? external : github ? github : '#'}>
+                  <a href={navToLink} target="_blank" rel="nofollow noopener noreferrer">
                     <Img fluid={cover.childImageSharp.fluid} alt={title} className="img" />
                   </a>
                 </div>

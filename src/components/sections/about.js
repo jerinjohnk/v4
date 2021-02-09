@@ -38,7 +38,7 @@ const StyledText = styled.div`
         content: '▹';
         position: absolute;
         left: 0;
-        color: var(--green);
+        color: var(--yellow);
         font-size: var(--fz-sm);
         line-height: 12px;
       }
@@ -60,7 +60,7 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--green);
+    background-color: var(--yellow);
 
     &:hover,
     &:focus {
@@ -105,7 +105,7 @@ const StyledPic = styled.div`
     }
 
     &:after {
-      border: 2px solid var(--green);
+      border: 2px solid var(--yellow);
       top: 20px;
       left: 20px;
       z-index: -1;
@@ -116,9 +116,9 @@ const StyledPic = styled.div`
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
-      avatar: file(sourceInstanceName: { eq: "images" }, relativePath: { eq: "me.jpg" }) {
+      avatar: file(sourceInstanceName: { eq: "images" }, relativePath: { eq: "me.png" }) {
         childImageSharp {
-          fluid(maxWidth: 500, traceSVG: { color: "#64ffda" }) {
+          fluid(maxWidth: 500, traceSVG: { color: "#FFDF6C" }) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
@@ -132,7 +132,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'HTML & (S)CSS', 'React', 'Vue', 'Node.js', 'WordPress'];
+  const skills = ['React Native', 'JavaScript (ES6+)', 'Swift', 'Typescript', 'C#'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -141,19 +141,19 @@ const About = () => {
       <div className="inner">
         <StyledText>
           <div>
-            <p>Hello! I'm Brittany, a software engineer based in Boston, MA.</p>
+            <p>Hello! I'm Jerin, a mobile app developer.</p>
 
             <p>
-              I enjoy creating things that live on the internet, whether that be websites,
-              applications, or anything in between. My goal is to always build products that provide
-              pixel-perfect, performant experiences.
+              I enjoy using my obsessive attention to detail and my unequivocal love for making
+              things that change the world. That's why I like to make things that make a difference.
             </p>
 
             <p>
-              Shortly after graduating from{' '}
-              <a href="https://www.ccis.northeastern.edu">Northeastern University</a>, I joined the
-              engineering team at <a href="https://www.upstatement.com">Upstatement</a> where I work
-              on a wide variety of interesting and meaningful projects on a daily basis.
+              I do sometimes indulge in writing articles on{' '}
+              <a href="https://www.medium.com/@jerinjohnk">medium</a> related to programing.
+            </p>
+            <p>
+              Talk about a guilty pleasure – I enjoy reading user reviews for apps developed by me.
             </p>
 
             <p>Here are a few technologies I've been working with recently:</p>
