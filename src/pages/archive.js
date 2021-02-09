@@ -170,6 +170,7 @@ const ArchivePage = ({ location, data }) => {
                     external,
                     ios,
                     android,
+                    win,
                     title,
                     tech,
                     company,
@@ -217,6 +218,11 @@ const ArchivePage = ({ location, data }) => {
                               <Icon name="PlayStore" />
                             </a>
                           )}
+                          {win && (
+                            <a href={win} aria-label="Microsoft Store Link">
+                              <Icon name="Windows" />
+                            </a>
+                          )}
                         </div>
                       </td>
                     </tr>
@@ -252,6 +258,7 @@ export const pageQuery = graphql`
             external
             ios
             android
+            win
             company
           }
           html
