@@ -67,7 +67,7 @@ const Footer = () => (
     </StyledSocialLinks>
 
     <StyledCredit tabindex="-1">
-      <a href="https://brittanychiang.com/">
+      <a href="https://github.com/bchiang7/v4" target="_blank" rel="nofollow noopener noreferrer">
         <div>Designed by Brittany Chiang</div>
       </a>
     </StyledCredit>

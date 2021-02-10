@@ -4,9 +4,9 @@ module.exports = {
   siteMetadata: {
     title: 'Jerin John K',
     description:
-      'Jerin John K is a software engineer specializing in building (and occasionally designing) exceptional mobile applications and everything in between.',
+      'Jerin John K, is an app developer and writer',
     siteUrl: 'https://jerinjohnk.com', // No trailing slash allowed!
-    image: '/og.png', // Path to your image you placed in the 'static' folder
+    image: '/snap.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@jerinjohnk',
   },
   plugins: [

@@ -48,8 +48,8 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Jerin John K</h2>;
-  const three = <h3 className="big-heading">I am a Mobile App Developer.</h3>;
+  const two = <h2 className="big-heading">Jerin John K.</h2>;
+  const three = <h3 className="big-heading">App Developer, Writer</h3>;
   const four = (
     <p>
       I have been developing apps in both native and hybrid apps covering iOS, Android, and windows.

@@ -149,8 +149,8 @@ const About = () => {
             </p>
 
             <p>
-              I do sometimes indulge in writing articles on{' '}
-              <a href="https://www.medium.com/@jerinjohnk">medium</a> related to programing.
+            I actively share my thoughts and research by writing articles on{' '}
+              <a href="https://www.medium.com/@jerinjohnk">medium</a>.
             </p>
             <p>
               Talk about a guilty pleasure – I enjoy reading user reviews for apps developed by me.
